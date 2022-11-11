@@ -1,10 +1,11 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_integration/pages/login_page.dart';
+import 'package:firebase_integration/authentication/auth_page.dart';
+// import 'package:firebase_integration/pages/login_page.dart';
 import 'package:flutter/material.dart';
 
-import 'home_page.dart';
+import '../pages/home_page.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({super.key});
@@ -15,7 +16,7 @@ class MainPage extends StatelessWidget {
       body: StreamBuilder<User?>(
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (context, snapshot) =>
-            snapshot.hasData ? HomePage() : LoginPage(),
+            snapshot.hasData ? HomePage() : AuthPage(),
       ),
     );
   }
