@@ -1,4 +1,5 @@
-import 'package:firebase_integration/pages/login_page.dart';
+// ignore_for_file: prefer_const_constructors, depend_on_referenced_packages
+
 import 'package:firebase_integration/pages/main_page.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
